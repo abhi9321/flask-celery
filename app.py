@@ -37,10 +37,10 @@ def index():
     email = request.args.get('email')
     print(email)
     # send the email
-    #{'subject': 'Hello from Flask', 'to': 'agopalaiah@quotient.com', 'body': 'This is a test email sent from a background Celery task.'}
+    #{'subject': 'Hello from Flask', 'to': 'mail.com', 'body': 'This is a test email sent from a background Celery task.'}
     email_data = {
         'subject': 'Hello from Flask',
-        'to': 'agopalaiah@quotient.com',
+        'to': 'mailid.com',
         'body': 'This is a test email sent from a background Celery task.'
     }
     print(email_data)
