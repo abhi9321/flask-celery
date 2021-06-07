@@ -12,8 +12,8 @@ app.config['CELERY_RESULT_BACKEND'] = 'redis://localhost:6379/0'
 app.config['MAIL_SERVER'] = 'smtp.googlemail.com'
 app.config['MAIL_PORT'] = 587
 app.config['MAIL_USE_TLS'] = True
-app.config['MAIL_USERNAME'] = 'abhishek.g9321@gmail.com' # os.environ.get('MAIL_USERNAME')
-app.config['MAIL_PASSWORD'] = 'Ab!5#5i@h' #os.environ.get('MAIL_PASSWORD')
+app.config['MAIL_USERNAME'] = os.environ.get('MAIL_USERNAME')
+app.config['MAIL_PASSWORD'] = os.environ.get('MAIL_PASSWORD')
 app.config['MAIL_DEFAULT_SENDER'] = 'flask@example.com'
 
 celery = Celery(app.name, broker=app.config['CELERY_BROKER_URL'], backend=app.config['CELERY_RESULT_BACKEND'])
